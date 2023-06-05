@@ -15,10 +15,10 @@ export default function CardProductMyShop(props) {
   async function handleDeleteProduct() {
     const toastId = toast(
       <div>
-        Are you sure you want to delete this product?
+        Está seguro de que desea eliminar este producto?
         <div>
-          <button className="my-button" onClick={() => toast.dismiss(toastId)}>Cancel</button>
-          <button className="my-button-delete" onClick={deleteProduct}>Delete</button>
+          <button className="my-button" onClick={() => toast.dismiss(toastId)}>Cancelar</button>
+          <button className="my-button-delete" onClick={deleteProduct}>Eliminar</button>
         </div>
       </div>,
       {
@@ -79,18 +79,18 @@ export default function CardProductMyShop(props) {
       </div>
       <div className="details-card-product">
         <div className="contInputProduct">
-          <p className="text-inputs">Edit title</p>
+          <p className="text-inputs">Editar nombre</p>
           <input ref={productNameRef} className="input-edit-product" type="text" defaultValue={product.name}  />
           <div className="cont-2-input">
             <div className="stock">
               <p className="text-inputs">Stock</p>
               <div className='stock-units'>
-                <p>Units</p>
+                <p>Unidad</p>
                 <input ref={productStockRef} className="input-edit-product-priceStock" type="text" defaultValue={product.stock} />
               </div>
             </div>
             <div className="price">
-              <p className="text-inputs">Price</p>
+              <p className="text-inputs">Precio</p>
               <div className='price-ar'>
                 <p>AR$</p>
                 <input ref={productPriceRef} className="input-edit-product-priceStock" type="text" defaultValue={product.price} />
@@ -100,8 +100,8 @@ export default function CardProductMyShop(props) {
           </div>
         </div>
         <div className="buttonsProducts">
-          <button className="button-product-delete" onClick={handleDeleteProduct}>Delete</button>
-          <button className="button-product" id={product._id} onClick={handleSaveProduct}>Save</button>
+          <button className="button-product-delete" onClick={handleDeleteProduct}>Eliminar</button>
+          <button className="button-product" id={product._id} onClick={handleSaveProduct}>Guardar</button>
         </div>
       </div>
     </div>

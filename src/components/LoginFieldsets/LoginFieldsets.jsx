@@ -7,7 +7,7 @@ export default function LoginFieldsets() {
     return (
         <>
             <fieldset className='fieldset'>
-                <legend>Email</legend>
+                <legend>Gmail</legend>
                 <div className='input-container'>
                     <input type='email' name='email' placeholder='email@gmail.com' />
                     <img src={email} alt='@' />
@@ -15,7 +15,7 @@ export default function LoginFieldsets() {
             </fieldset>
 
             <fieldset className='fieldset'>
-                <legend>Password</legend>
+                <legend>Contraseña</legend>
                 <div className='input-container'>
                     <input type='password' name='password' placeholder='......................' />
                     <img src={lock} alt='lock' />

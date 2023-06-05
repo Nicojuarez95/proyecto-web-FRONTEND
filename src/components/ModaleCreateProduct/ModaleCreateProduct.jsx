@@ -98,15 +98,15 @@ export default function Modal({ onClose }) {
   return (
     <div className="modalContainer2">
       <div className="contentModal2">
-        <h3>Create your product</h3>
+        <h3>Agregá tu producto</h3>
         <div className="containerMyShop">
           <form className="containerMyShop2" ref={formInfo}>
             <span>
-              <label>Name</label>
+              <label>Nombre</label>
               <input type="text" />
             </span>
             <span className="selecCategory">
-              <label>Category</label>
+              <label>Categoria</label>
               <select className="selectCate" name="" id="">
                 {categories.map((category, i) => {
                   let card = (
@@ -123,7 +123,7 @@ export default function Modal({ onClose }) {
               </select>
             </span>
             <span>
-              <label>Price</label>
+              <label>Precio</label>
               <input type="number"  placeholder='Ej:5000'/>
             </span>
             <span>
@@ -131,7 +131,7 @@ export default function Modal({ onClose }) {
               <input type="number" />
             </span>
             <span>
-              <label>Select photo</label>
+              <label>Seleccionar foto</label>
               <input
                 type="file"
                 name="banner"
@@ -143,11 +143,11 @@ export default function Modal({ onClose }) {
                 hidden
               />
               <label htmlFor="file-banner" className="uploadInput">
-                <span>Select File</span>
+                <span>Seleccionar archivo</span>
               </label>
             </span>
             <span>
-              <label>Description</label>
+              <label>Descripción</label>
               <textarea
                 className="textAreaModal"
                 name=""
@@ -158,8 +158,8 @@ export default function Modal({ onClose }) {
             </span>
 
             <div className="buttonsContainerModal">
-              <button onClick={onClose}>Cancel</button>
-              <button onClick={createProduct}>Create</button>
+              <button onClick={onClose}>Cancelar</button>
+              <button onClick={createProduct}>Crear</button>
             </div>
           </form>
         </div>

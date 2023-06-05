@@ -15,7 +15,7 @@ export default function ModalTokenInfo(props) {
           <div className="modalT">
             <div className="modal-content">
               <div className="conttokenX">
-                <h2>How to get this token?</h2>
+                <h2>¿Cómo conseguir este token?</h2>
                 <button
                   className="close-btn"
                   onClick={() => setShowModal(false)}
@@ -38,7 +38,7 @@ export default function ModalTokenInfo(props) {
                   target="_blank"
                   className="mercadopago"
                 >
-                 Go to Mercado Pago Developers
+                 Ir a Mercado Pago Desarrolladores
                 </Anchor>
             </div>
           </div>

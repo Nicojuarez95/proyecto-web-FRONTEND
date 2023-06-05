@@ -75,11 +75,11 @@ export default function RegisterForm() {
             </div>
             <div className='register-text'>
                 <img src={close} className='register-x' onClick={closeModal}/>
-                <h2>Register</h2>
+                <h2>Registrarse</h2>
                 <RegisterFieldsets />
                 <SignBtn text='Sign Up' />
                 {/* ACA PONER BOTON GOOGLE */}
-                <p>Already have an account? <Anchor className='link' onClick={handleRender}>Log in</Anchor></p>
+                <p>Ya tienes una cuenta? <Anchor className='link' onClick={handleRender}>Iniciá sesión</Anchor></p>
                 <GoBackToHome />
             </div>
             <Toaster

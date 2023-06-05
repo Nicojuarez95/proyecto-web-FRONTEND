@@ -21,9 +21,9 @@ export default function BodyHome() {
     <div className='Body_Home' ref={HomeRef}>
       <div className='infoHome'>
         <div className='cont_infoHome'>
-          <h2 className='text1'>Finally, a modern</h2>
-          <h2 className='text2'>Online store builder for anyone</h2>
-          <h2 className='text1'>Easy. For cell phones. Open source.</h2>
+          <h2 className='text1'>Finalmente, algo nuevo</h2>
+          <h2 className='text2'>Creador de tiendas en línea para cualquier persona</h2>
+          <h2 className='text1'>Fácil. Para celulares y en constante desarrollo</h2>
         </div>
         <BtnAnchor to='/shops' name='See all stores' class='color_1' />
       </div>

@@ -8,23 +8,23 @@ export default function RegisterFieldsets() {
     return (
         <>
             <fieldset className='fieldset'>
-                <legend>Name</legend>
+                <legend>Nombre</legend>
                 <div className='input-container'>
-                    <input type='text' name='name' placeholder='Name' />
+                    <input type='text' name='name' placeholder='Nombre' />
                     <img src={profile} alt='profile' />
                 </div>
             </fieldset>
 
             <fieldset className='fieldset'>
-                <legend>Last Name</legend>
+                <legend>Apellido</legend>
                 <div className='input-container'>
-                    <input type='text' name='last_name' placeholder='Last Name' />
+                    <input type='text' name='last_name' placeholder='Apellido' />
                     <img src={profile} alt='profile' />
                 </div>
             </fieldset>
 
             <fieldset className='fieldset'>
-                <legend>Email</legend>
+                <legend>Gmail</legend>
                 <div className='input-container'>
                     <input type='email' name='email' placeholder='email@gmail.com' />
                     <img src={email} alt='@' />
@@ -32,7 +32,7 @@ export default function RegisterFieldsets() {
             </fieldset>
 
             <fieldset className='fieldset'>
-                <legend>Password</legend>
+                <legend>Contraseña</legend>
                 <div className='input-container'>
                     <input type='password' name='password' placeholder='......................' />
                     <img src={lock} alt='lock' />

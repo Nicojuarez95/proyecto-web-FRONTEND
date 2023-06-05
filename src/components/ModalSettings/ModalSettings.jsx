@@ -5,11 +5,11 @@ export default function Modal() {
   return (
     <div className="modalContainer">
       <div className="contentModal">
-        <div className="buttonDeleteAll">Delete all products</div>
-        <div className="buttonDeleteAll">Delete shop</div>
+        <div className="buttonDeleteAll">Eliminar todos los productos</div>
+        <div className="buttonDeleteAll">Elimiar Tienda</div>
         <span>
           <label>Mercado Pago</label>
-          <label>Insert your access keys</label>
+          <label>Inserta tu clave de acceso</label>
         </span>
       </div>
     </div>

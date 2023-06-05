@@ -4,16 +4,16 @@ export default function RandomText() {
   const textAlerts = [
     {
       text:
-        "Do not think twice, create your free store today with a few simple clicks",
+        "No lo pienses más, crea tu tienda gratis hoy con unos simples clics",
     },
     {
       text:
-        "Accept payments from any method with MercadoPago integrated into your store",
+        "Acepta pagos desde cualquier método con MercadoPago integrado en tu tienda",
     },
     {
-      text: "A short and catchy name is key to the success of your online store",
+      text: "Un nombre corto y pegadizo es clave para el éxito de tu tienda online",
     },
-    { text: "Make your store visually appealing with a nice image and banner" },
+    { text: "Haz que tu tienda sea visualmente atractiva con una bonita imagen y un banner" },
   ];
 
   const [isRandomText, setRandomText] = useState("");

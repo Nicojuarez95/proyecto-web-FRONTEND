@@ -209,15 +209,15 @@ export default function MyStore() {
             <div className="infoMyStore">
               <span className="buttonsContainer">
                 <div className="buttonCustomer" onClick={handleCustomer}>
-                  Look as a customer
+                Mirar como cliente
                 </div>
                 <div className="buttonEditStore" onClick={openModal}>
-                  Edit Shop
+                  Editar la tienda
                 </div>
                 {isOpen && <Modal key={isClosed} onClose={closeModal} />}
 
                 <div className="buttonEditStore" onClick={openSettings}>
-                  Add product
+                  Agregar producto
                 </div>
                 {open && (
                   <ModalCreateProduct key={isClosed} onClose={closeModal2} />
@@ -234,9 +234,9 @@ export default function MyStore() {
                   <input
                     ref={inputCategory}
                     type="text"
-                    placeholder="Create category for your products!"
+                    placeholder="Crea una categoría para tus productos!"
                   />
-                  <button onClick={createCategory}>Create</button>
+                  <button onClick={createCategory}>Crear</button>
                 </div>
               </div>
               <div className="cont-cards-products">
@@ -255,14 +255,14 @@ export default function MyStore() {
           </>
         ) : (
           <div className="viewCreateNewStore">
-            <h2 className="newShop">New Shop</h2>
+            <h2 className="newShop">Nueva Tienda</h2>
             <div className="viewNewShopIMG">
               <img src={loginbg} alt="" className="loginBg" />
             </div>
             <div className="viewNewShop">
               <form ref={formInfo} className="contInputNewStore">
                 <span>
-                  <label>Name</label>
+                  <label>Nombre</label>
                   <input
                     type="text"
                     name="name"
@@ -271,19 +271,19 @@ export default function MyStore() {
                   />
                 </span>
                 <span>
-                  <label>Select Category</label>
+                  <label>Seleccioná la categoría</label>
                   <CategoriesSelect style="selectMyStore" />
                 </span>
                 <span>
-                  <label>Country</label>
+                  <label>País</label>
                   <input type="text" required name="country" />
                 </span>
                 <span>
-                  <label>City</label>
+                  <label>Ciudad</label>
                   <input type="text" name="city" required />
                 </span>
                 <span>
-                  <label>Phone</label>
+                  <label>Celular</label>
                   <input
                     type="text"
                     name="phone"
@@ -293,7 +293,7 @@ export default function MyStore() {
                   />
                 </span>
                 <span className="tokenClass">
-                  <label>Token</label>
+                  <label>Token Mercado Pago</label>
                   <div className="contTokenInpBtn">
                     <input
                       className="inputToken"
@@ -306,7 +306,7 @@ export default function MyStore() {
                       type="button"
                       onClick={showInfoToken}
                     >
-                      How to get this token?
+                      Cómo conseguir este token?
                     </button>
                   </div>
                 </span>
@@ -315,7 +315,7 @@ export default function MyStore() {
                   setShowModal={setShowModal}
                 />
                 <span>
-                  <label>Upload Logo</label>
+                  <label>Cargar Logo</label>
                   <input
                     type="file"
                     name="photo"
@@ -327,11 +327,11 @@ export default function MyStore() {
                     hidden
                   />
                   <label htmlFor="file-logo" className="logoUpload">
-                    <span>Select File</span>
+                    <span>Seleccionar archivo</span>
                   </label>
                 </span>
                 <span>
-                  <label>Upload Banner</label>
+                  <label>Cargar Banner</label>
                   <input
                     type="file"
                     name="banner"
@@ -343,11 +343,11 @@ export default function MyStore() {
                     hidden
                   />
                   <label htmlFor="file-banner" className="logoUpload">
-                    <span>Select File</span>
+                    <span>Seleccionar archivo</span>
                   </label>
                 </span>
                 <span>
-                  <label>Description</label>
+                  <label>Descripción</label>
                   <textarea
                     name="description"
                     id=""
@@ -357,7 +357,7 @@ export default function MyStore() {
                   ></textarea>
                 </span>
                 <button className="submitButton" onClick={handleNewShop}>
-                  Create
+                  Crear
                 </button>
               </form>
             </div>

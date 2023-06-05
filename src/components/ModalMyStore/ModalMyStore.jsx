@@ -106,13 +106,13 @@ export default function Modal({ onClose }) {
     const promise = new Promise(async (resolve, reject) => {
       const toastId = toast(
         <div>
-          🗑️ Accept to delete your store?
+          🗑️ Acepta eliminar tu tienda?
           <div className="toastButtons">
             <button className="my-button" onClick={() => reject()}>
-              Cancel
+              Cancelar
             </button>
             <button className="my-button-delete" onClick={() => resolve()}>
-              Delete
+              Eliminar
             </button>
           </div>
         </div>,
@@ -134,8 +134,8 @@ export default function Modal({ onClose }) {
 
     toast
       .promise(promise, {
-        pending: "Deleting shop...",
-        error: "Error deleting shop...",
+        pending: "Eliminando Tienda",
+        error: "Error al eliminar tienda...",
         position: "top-center",
         icon: "🗑️",
         style: {
@@ -176,15 +176,15 @@ export default function Modal({ onClose }) {
   return (
     <div className="modalContainer">
       <div className="contentModal">
-        <h3>Edit your shop</h3>
+        <h3>Editá tu tienda</h3>
         <div className="containerMyShop">
           <form className="containerMyShop" ref={formInfo}>
             <span>
-              <label>Name</label>
+              <label>Nombre</label>
               <input type="text" defaultValue={shop.name} />
             </span>
             <span>
-              <label>Change your banner</label>
+              <label>Cambiar banner</label>
               <input
                 type="file"
                 name="banner"
@@ -196,11 +196,11 @@ export default function Modal({ onClose }) {
                 hidden
               />
               <label htmlFor="file-banner" className="uploadInput">
-                <span>Select File</span>
+                <span>Seleccionar archivo</span>
               </label>
             </span>
             <span>
-              <label>Change your logo</label>
+              <label>Cambiar el logo</label>
               <input
                 type="file"
                 name="photo"
@@ -212,13 +212,13 @@ export default function Modal({ onClose }) {
                 hidden
               />
               <label htmlFor="file-logo" className="uploadInput">
-                <span>Select File</span>
+                <span>Seleccionar archivo</span>
               </label>
             </span>
 
             <div className="buttonsContainerModal">
-              <button onClick={onClose}>Cancel</button>
-              <button onClick={handleUpdateShop}>Save Changes</button>
+              <button onClick={onClose}>Cancelar</button>
+              <button onClick={handleUpdateShop}>Guardar Cambios</button>
             </div>
             <div className="buttonsContainerModal">
               <button
@@ -226,7 +226,7 @@ export default function Modal({ onClose }) {
                 id="deletebtn"
                 onClick={handleDeleteShopAlert}
               >
-                Delete shop
+                Eliminar Tienda
               </button>
             </div>
           </form>

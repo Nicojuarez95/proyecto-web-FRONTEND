@@ -95,7 +95,7 @@ export default function OneProduct() {
         <div className='product-Img'>
           <Anchor to={`/shop/${shopId}`} className='backToShops'>
             <ArrowLeft />
-            <p>Back to Products</p>
+            <p>Regresar a los productos</p>
           </Anchor>
           <img src={product.photo} alt={product?.name} />
         </div>
@@ -114,10 +114,10 @@ export default function OneProduct() {
                 <button onClick={handleMoreStock}>+</button>
               </div> : <></>
             }
-            {maxStock ? <p className='stockText'>Only {product.stock} items in stock</p> : <p className='noStockText'>No Stock</p>}
-            <p className='description-title'>Description</p>
+            {maxStock ? <p className='stockText'>Solo {product.stock} unidades en stock</p> : <p className='noStockText'>Sin Stock</p>}
+            <p className='description-title'>Descripción</p>
             <p className='description-text'>{product.description}</p>
-            {maxStock ? <button className='addToCart' onClick={handleCart}>ADD TO CART</button> : <></>}
+            {maxStock ? <button className='addToCart' onClick={handleCart}>AGREGAR AL CARRITO</button> : <></>}
           </div>
         </div>
       </div>

@@ -103,17 +103,17 @@ export default function AdminProducts() {
         user.admin ? <div className='admin-view'>
           <div className='admin-content'>
             <div className='filter-container'>
-              <h3>Products ({cantProducts})</h3>
+              <h3>Productos ({cantProducts})</h3>
               <div className='admin-search'>
                 <label htmlFor='search'><img src={loupe} alt='loupe' /></label>
-                <input type='text' ref={search} id='search' placeholder='Search products by name...' onChange={getProducts} />
+                <input type='text' ref={search} id='search' placeholder='Buscar producto por nombre...' onChange={getProducts} />
               </div>
             </div>
             <div className='adminItem-container'>
               <div className='container-title'>
-                <p className='admin-propTitle'>NAME</p>
+                <p className='admin-propTitle'>NOMBRE</p>
                 <p className='admin-propTitle stock'>STOCK</p>
-                <p className='admin-propTitle shop'>SHOP</p>
+                <p className='admin-propTitle shop'>TIENDA</p>
               </div>
             </div>
             <div className='items-container'>

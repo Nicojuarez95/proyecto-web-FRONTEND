@@ -45,6 +45,7 @@ export default function Profile() {
           Body: file,
         };
         const responseS3 = await s3.upload(params).promise();
+        console.log(responseS3)
         photoStorage = responseS3.Location;
       }
 
@@ -90,7 +91,7 @@ export default function Profile() {
       <NavBarStores />
       <div className="containerContent">
         <div className="backgroundProfile">
-          <div className="topProfile">Welcome back {name} !</div>
+          <div className="topProfile">Bienvenido, {name} !</div>
           <div className="bottomProfile">
             <span className="iconInfo">
               <p>i</p>
@@ -120,7 +121,7 @@ export default function Profile() {
           </span>
           <div className="containerInputs">
             <span className="inputContainerProfile">
-              <label>Name</label>
+              <label>Nombre</label>
               <input
                 type="text"
                 value={data.name}
@@ -130,7 +131,7 @@ export default function Profile() {
               />
             </span>
             <span className="inputContainerProfile">
-              <label>Last name</label>
+              <label>Apellido</label>
               <input
                 type="text"
                 value={data.last_name}
@@ -140,7 +141,7 @@ export default function Profile() {
               />
             </span>
             <span className="inputContainerProfileEmail">
-              <label>Email</label>
+              <label>Gmail</label>
               <input
                 type="text"
                 placeholder={mail}
@@ -154,7 +155,7 @@ export default function Profile() {
 
             <span className="containerButtonsProfile">
               <div className="buttonProfile" onClick={editProfile}>
-                Save
+                Guardar
               </div>
             </span>
           </div>

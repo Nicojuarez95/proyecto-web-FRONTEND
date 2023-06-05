@@ -17,6 +17,7 @@ import ExitToAppRoundedIcon from "@mui/icons-material/ExitToAppRounded";
 import PeopleAltRoundedIcon from "@mui/icons-material/PeopleAltRounded";
 import modalActions from "../../store/ModalForm/actions.js";
 import { Admin } from "../Icons/Icons.js";
+import logoheader from "../../images/Proyecto__2_-removebg-preview.png"
 
 const { renderModal } = modalActions;
 
@@ -68,7 +69,7 @@ export default function HeaderHome() {
         navigate("/");
       }, 500);
     } catch (error) {
-      toast.error("You're already signed out or not signed in");
+      toast.error("Ya has cerrado sesión o no has iniciado sesión");
     }
   }
 
@@ -92,7 +93,7 @@ export default function HeaderHome() {
         setIsOpen(!isOpen);
       }, 1000);
     } catch (error) {
-      toast.error("You're already signed out or not signed in");
+      toast.error("Ya has cerrado sesión o no has iniciado sesión");
     }
   }
 
@@ -143,7 +144,7 @@ export default function HeaderHome() {
         <Anchor to="/">
           <img
             className="logo"
-            src="https://i.imgur.com/iSp1sxK.png"
+            src={logoheader}
             alt="logo"
           />
         </Anchor>
@@ -152,14 +153,14 @@ export default function HeaderHome() {
             className={activeButton === "Home" ? "btn_nav active" : "btn_nav"}
             onClick={handleHomeUs}
           >
-            Home
+            Inicio
           </Anchor>
           <Anchor
             to="/shops"
             className={activeButton === "Stores" ? "btn_nav active" : "btn_nav"}
             onClick={() => setActiveButton("Stores")}
           >
-            Stores
+            Tiendas
           </Anchor>
           <Anchor
             className={
@@ -167,7 +168,7 @@ export default function HeaderHome() {
             }
             onClick={handleAboutUs}
           >
-            About Us
+            Acerca de
           </Anchor>
           <Anchor
             className={
@@ -175,7 +176,7 @@ export default function HeaderHome() {
             }
             onClick={handleCustomer}
           >
-            Stories
+            Comentarios
           </Anchor>
           <Anchor
             className={
@@ -183,7 +184,7 @@ export default function HeaderHome() {
             }
             onClick={handleContact}
           >
-            Contact
+            Contacto
           </Anchor>
           {user.admin ? <Anchor className="btn_nav" to="/admin/shops">
             Admin
@@ -227,13 +228,13 @@ export default function HeaderHome() {
             <div className="nav-btn">
               <Anchor className="a-btn">
                 <HomeRoundedIcon />
-                Home
+                Inicio
               </Anchor>
             </div>
             <div className="nav-btn">
               <Anchor className="a-btn" to="/shops">
                 <ShoppingBagRoundedIcon />
-                Stores
+                Tiendas
               </Anchor>
             </div>
             {
@@ -251,7 +252,7 @@ export default function HeaderHome() {
                 <div className="nav-btn">
                   <Anchor className="a-btn" onClick={handleSignUpModal}>
                     <PersonAddAltRoundedIcon />
-                    Register
+                    Registro
                   </Anchor>
                 </div>
 
@@ -263,7 +264,7 @@ export default function HeaderHome() {
                 <div className="nav-btn">
                   <Anchor className="a-btn" onClick={handleSignInModal}>
                     <PersonRoundedIcon />
-                    Login
+                    Acceso
                   </Anchor>
                 </div>
             }
@@ -272,7 +273,7 @@ export default function HeaderHome() {
             <div className="nav-btn">
               <Anchor className="a-btn">
                 <LiveHelpRoundedIcon />
-                Help
+                Ayuda
               </Anchor>
             </div>
             {
@@ -280,7 +281,7 @@ export default function HeaderHome() {
                 <div className="nav-btn">
                   <Anchor className="a-btn" onClick={handleSignOutModal}>
                     <ExitToAppRoundedIcon />
-                    Logout
+                    Cerrar sesión
                   </Anchor>
                 </div>
                 :

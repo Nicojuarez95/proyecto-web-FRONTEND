@@ -33,8 +33,8 @@ export default function Verify() {
         <div className='bodyVerify'>
             <div className='infoVerify'>
                 <div className='cont-verify'>
-                    <h1>You are verified now!</h1>
-                    <Anchor className='a-redirect' to='/'>Back to home</Anchor>
+                    <h1>Estás verificado ahora!</h1>
+                    <Anchor className='a-redirect' to='/'>De vuelta a Inicio</Anchor>
                 </div>
             </div>
         </div>

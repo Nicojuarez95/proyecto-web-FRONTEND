@@ -43,7 +43,7 @@ export default function NavBarAdmin() {
                 navigate("/")
             }, 1000)
         } catch (error) {
-            toast.error("You're already signed out or not signed in")
+            toast.error("Ya has cerrado sesión o no has iniciado sesión")
         }
     }
 
@@ -64,46 +64,46 @@ export default function NavBarAdmin() {
                     <span className="buttonEffect">
                         <Anchor to='/' className="buttonAnchor">
                             <Home />
-                            Home
+                            Inicio
                         </Anchor>
                     </span>
                     <span className="buttonEffect">
                         <Anchor to='/profile' className="buttonAnchor">
                             <Profile />
-                            Profile
+                            Perfil
                         </Anchor>
                     </span>
                     <hr style={{ width: '100%' }} />
                     <span className="buttonEffect">
                         <Anchor to='/admin/shops' className="buttonAnchor">
                             <Store />
-                            Shops
+                            Tiendas
                         </Anchor>
                     </span>
                     <span className="buttonEffect">
                         <Anchor to='/admin/users' className="buttonAnchor">
                             <Profile />
-                            Users
+                            Usuarios
                         </Anchor>
                     </span>
                     <span className="buttonEffect">
                         <Anchor to='/admin/products' className="buttonAnchor">
                             <Store />
-                            Products
+                            Productos
                         </Anchor>
                     </span>
                     <div className="logOutHelp">
                         <span className="buttonEffect">
                             <Anchor className="buttonAnchor">
                                 <SupportAgent />
-                                Support Center
+                                Centro de ayuda
                             </Anchor>
                         </span>
                         {
                             token ? <span className="buttonEffect">
                                 <Anchor className="buttonAnchor" onClick={handleSignOutModal}>
                                     <LogOut />
-                                    Logout
+                                    Cerrar sesión
                                 </Anchor>
                             </span> : <></>
                         }

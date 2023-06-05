@@ -184,10 +184,10 @@ export default function OneStore() {
         <div className="firtsFilterContainer">
           <Anchor to="/shops" className="backToShops">
             <ArrowLeft />
-            <p>Back to Shops</p>
+            <p>Regresar a tiendas</p>
           </Anchor>
           <div className="sortContainer" onClick={handleSort}>
-            <p>Sort</p>
+            <p>Clasificar</p>
             <img src={arrowDown} alt="arrow down" />
           </div>
         </div>
@@ -204,14 +204,14 @@ export default function OneStore() {
                   onChange={getProducts}
                   type="text"
                   id="search"
-                  placeholder="Find your product"
+                  placeholder="Encuentre su producto"
                 />
               </div>
             </div>
             <hr />
-            <h3>Categories</h3>
+            <h3>Categorías</h3>
             <select onChange={handleOptionChange}>
-              <option value="">All</option>
+              <option value="">Todas</option>
               {categories.map((category, i) => {
                 let card = (
                   <option key={i} value={category.category_name}>
@@ -226,7 +226,7 @@ export default function OneStore() {
                 setCategory("");
               }}
             >
-              All Categories
+              Todas las categorias
             </h4>
             {categories.map((category, i) => {
               let card = (

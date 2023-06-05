@@ -44,10 +44,10 @@ export default function AdminUsers() {
         const promise = new Promise(async (resolve, reject) => {
             const toastId = toast(
                 <div>
-                    Are you sure you want to delete this user?
+                    Está seguro de que desea eliminar este usuario?
                     <div>
-                        <button className="my-button" onClick={() => reject()}>Cancel</button>
-                        <button className="my-button-delete" onClick={() => resolve()}>Delete</button>
+                        <button className="my-button" onClick={() => reject()}>Cancelar</button>
+                        <button className="my-button-delete" onClick={() => resolve()}>Eliminar</button>
                     </div>
                 </div>,
                 {
@@ -117,17 +117,17 @@ export default function AdminUsers() {
                             <h3>Users ({cantUsers})</h3>
                             <div className='admin-search'>
                                 <label htmlFor='search'><img src={loupe} alt='loupe' /></label>
-                                <input type='text' ref={search} id='search' placeholder='Search users by name...' onChange={getUsers} />
+                                <input type='text' ref={search} id='search' placeholder='Buscar usuario por nombre...' onChange={getUsers} />
                             </div>
                         </div>
                         <div className='adminItem-container'>
                             <div className='container-title'>
-                                <p className='admin-propTitle '>NAME</p>
+                                <p className='admin-propTitle '>NOMBRE</p>
                                 <div className='sort seller' onClick={handleSeller}>
-                                    <p>IS SELLER</p>
+                                    <p>ES VENDEDOR</p>
                                     <img src={arrowDown} />
                                 </div>
-                                <p className='admin-propTitle shop users'>SHOP</p>
+                                <p className='admin-propTitle shop users'>TIENDA</p>
                             </div>
                         </div>
                         <div className='items-container'>
@@ -138,7 +138,7 @@ export default function AdminUsers() {
                                         let card = <div className='adminItem-container' key={i}>
                                             <div className='container-title'>
                                                 <p className='admin-prop'>{user.name + " " + user.last_name}</p>
-                                                {user.is_seller ? <p className='admin-prop seller'>Yes</p> : <p className='admin-prop seller'>No</p>}
+                                                {user.is_seller ? <p className='admin-prop seller'>Si</p> : <p className='admin-prop seller'>No</p>}
                                                 {
                                                     shops.map((shop, i) => {
                                                         if (shop.user_id == user._id) {
@@ -150,7 +150,7 @@ export default function AdminUsers() {
                                                 {userShop ? <></> : <p className='admin-prop shop'>-</p>}
                                             </div>
                                             <div className='admin-btns'>
-                                                <p className='admin-delete' id={user._id} onClick={handleDeleteUserAlert}>Delete</p>
+                                                <p className='admin-delete' id={user._id} onClick={handleDeleteUserAlert}>Eliminar</p>
                                             </div>
                                         </div>
                                         return card

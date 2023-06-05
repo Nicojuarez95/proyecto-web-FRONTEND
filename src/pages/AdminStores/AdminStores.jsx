@@ -47,10 +47,10 @@ export default function AdminStores() {
         const promise = new Promise(async (resolve, reject) => {
             const toastId = toast(
                 <div>
-                    Are you sure you want to delete this shop?
+                    Estás seguro que quieres eliminar esta tienda?
                     <div>
-                        <button className="my-button" onClick={() => reject()}>Cancel</button>
-                        <button className="my-button-delete" onClick={() => resolve()}>Delete</button>
+                        <button className="my-button" onClick={() => reject()}>Cancelar</button>
+                        <button className="my-button-delete" onClick={() => resolve()}>Eliminar</button>
                     </div>
                 </div>,
                 {
@@ -123,55 +123,55 @@ export default function AdminStores() {
                 user.admin ? <div className='admin-view'>
                     <div className='admin-content'>
                         <div className='filter-container'>
-                            <h3>Shops ({cantShops})</h3>
+                            <h3>Tiendas ({cantShops})</h3>
                             <div className='admin-search'>
                                 <label htmlFor='search'><img src={loupe} alt='loupe' /></label>
-                                <input type='text' ref={search} id='search' placeholder='Search shops by name...' onChange={getShops} />
+                                <input type='text' ref={search} id='search' placeholder='Buscar tienda por nombre...' onChange={getShops} />
                             </div>
                             <select onChange={handleCategories} className='categorySelect' name="category">
-                                <option value=''>
-                                    All Categories
-                                </option>
-                                <option value="Clothing and Accessories">
-                                    Clothing and Accessories
-                                </option>
-                                <option value="Shoes">Shoes</option>
-                                <option value="Beauty and Personal Care">
-                                    Beauty and Personal Care
-                                </option>
-                                <option value="Electronics">Electronics</option>
-                                <option value="Home and Garden">Home and Garden</option>
-                                <option value="Toys and Games">Toys and Games</option>
-                                <option value="Books and Music">Books and Music</option>
-                                <option value="Sports and Outdoor Activities">
-                                    Sports and Outdoor Activities
-                                </option>
-                                <option value="Food and Beverages">Food and Beverages</option>
-                                <option value="Pets">Pets</option>
-                                <option value="Cars and Motorcycles">Cars and Motorcycles</option>
-                                <option value="Jewelry and Watches">Jewelry and Watches</option>
-                                <option value="Office Supplies and Stationery">
-                                    Office Supplies and Stationery
-                                </option>
-                                <option value="Financial and Banking Services">
-                                    Financial and Banking Services
-                                </option>
-                                <option value="Gift and Souvenir Shops">Gift and Souvenir Shops</option>
-                                <option value="Health and Wellness">Health and Wellness</option>
-                                <option value="Art and Craft Stores">Art and Craft Stores</option>
-                                <option value="Technology and Gadgets">Technology and Gadgets</option>
-                                <option value="Travel and Tourism">Travel and Tourism</option>
-                                <option value="Second-hand or Thrift Stores">
-                                    Second-hand or Thrift Stores
-                                </option>
-                                <option value="Other">Other</option>
+                            <option value=''>
+                                Todas las categorías
+                            </option>
+                            <option value="Ropa y Accesorios">
+                                Ropa y Accesorios
+                            </option>
+                            <option value="Zapatos">Zapatos</option>
+                            <option value="Belleza y Cuidado Personal">
+                                Belleza y Cuidado Personal
+                            </option>
+                            <option value="Electrónicos">Electrónicos</option>
+                            <option value="Hogar y Jardín">Hogar y Jardín</option>
+                            <option value="Juguetes y Juegos">Juguetes y Juegos</option>
+                            <option value="Libros y Música">Libros y Música</option>
+                            <option value="Deportes y Actividades al Aire Libre">
+                                Deportes y Actividades al Aire Libre
+                            </option>
+                            <option value="Comida y Bebidas">Comida y Bebidas</option>
+                            <option value="Mascotas">Mascotas</option>
+                            <option value="Automóviles y Motocicletas">Automóviles y Motocicletas</option>
+                            <option value="Joyería y Relojes">Joyería y Relojes</option>
+                            <option value="Suministros de Oficina y Papelería">
+                                Suministros de Oficina y Papelería
+                            </option>
+                            <option value="Servicios Financieros y Bancarios">
+                                Servicios Financieros y Bancarios
+                            </option>
+                            <option value="Tiendas de Regalos y Souvenirs">Tiendas de Regalos y Souvenirs</option>
+                            <option value="Salud y Bienestar">Salud y Bienestar</option>
+                            <option value="Tiendas de Arte y Manualidades">Tiendas de Arte y Manualidades</option>
+                            <option value="Tecnología y Gadgets">Tecnología y Gadgets</option>
+                            <option value="Viajes y Turismo">Viajes y Turismo</option>
+                            <option value="Tiendas de Segunda Mano o de Oportunidad">
+                                Tiendas de Segunda Mano o de Oportunidad
+                            </option>
+                            <option value="Otro">Otro</option>
                             </select>
                         </div>
                         <div className='adminItem-container'>
                             <div className='container-title'>
-                                <p className='admin-propTitle'>NAME</p>
-                                <p className='admin-propTitle category'>CATEGORY</p>
-                                <p className='admin-propTitle country'>COUNTRY</p>
+                                <p className='admin-propTitle'>NOMBRE</p>
+                                <p className='admin-propTitle category'>CATEGORIA</p>
+                                <p className='admin-propTitle country'>PAIS</p>
                             </div>
                         </div>
                         <div className='items-container'>
@@ -185,8 +185,8 @@ export default function AdminStores() {
                                                 <p className='admin-prop country'>{shop.country}</p>
                                             </div>
                                             <div className='admin-btns'>
-                                                {shop.active ? <p className='admin-desactivate' id={shop._id} onClick={desactivateOne}>Desactivate</p> : <p className='admin-desactivate' id={shop._id} onClick={desactivateOne}>Activate</p>}
-                                                <p className='admin-delete' id={shop._id} onClick={handleDeleteShopAlert}>Delete</p>
+                                                {shop.active ? <p className='admin-desactivate' id={shop._id} onClick={desactivateOne}>Desactivar</p> : <p className='admin-desactivate' id={shop._id} onClick={desactivateOne}>Activate</p>}
+                                                <p className='admin-delete' id={shop._id} onClick={handleDeleteShopAlert}>Eliminar</p>
                                             </div>
                                         </div>
                                         return card

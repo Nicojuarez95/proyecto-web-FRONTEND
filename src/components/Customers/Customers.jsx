@@ -17,25 +17,22 @@ export default function Customers() {
   const customers = [
     {
       name: "Jaime Foldón",
-      comment:
-        "I loved the experience of shopping at Lance's online store. From the moment I entered his website, I was able to easily navigate through the different categories and find what I was looking for.",
-      rating: 5,
-      image: persona1,
+      comment: "Me encantó la experiencia de comprar en la tienda en línea. Desde el momento en que ingresé a su sitio web, pude navegar fácilmente por las diferentes categorías y encontrar lo que estaba buscando.",
+      rating: 4,
+      image: persona1
     },
     {
-      name: "Aleja Amigo",
-      comment:
-        "I highly recommend Lance's online store. It is easy to use, intuitive, and has a wide variety of high-quality products. Also, I love that they offer free shipping on orders over a certain amount.",
+      name: "Aleja Amico",
+      comment: "Recomiendo ampliamente la tienda en línea de Proyecto Web. Es fácil de usar, intuitiva y tiene una amplia variedad de productos de alta calidad que cargan sus tiendas participes.",
       rating: 5,
-      image: persona2,
+      image: persona2
     },
     {
       name: "Antonio Garrete",
-      comment:
-        "Lance's app is awesome! From the visually appealing design to the ease of navigation. Also, the range of products available was impressive and I was able to find exactly what I was looking for.",
-      rating: 5,
-      image: persona3,
-    },
+      comment: "¡La aplicación es increíble! Desde el diseño visualmente atractivo hasta la facilidad de navegación. Además, la variedad de productos disponibles fue impresionante y pude encontrar exactamente lo que estaba buscando.",
+      rating: 4,
+      image: persona3
+    }
   ];
 
   const customer = customers[activeIndex];
@@ -51,7 +48,7 @@ export default function Customers() {
     <div ref={customersRef}>
       <div className="customers">
         <div className="cont-title-customers">
-          <h2>Satisfied customers</h2>
+          <h2>Clientes satisfechos</h2>
         </div>
 
         <div className="cont-names">
@@ -88,7 +85,7 @@ export default function Customers() {
       </div>
       <div className="allPerson">
         <div className="cont-title-customers">
-          <h2>Satisfied customers</h2>
+          <h2>Clientes satisfechos</h2>
         </div>
         <div className="cont-names">
           {customers.map((customer,i) => (

@@ -69,7 +69,7 @@ export default function CardStoreView(props) {
             <p>{shop.category}</p>
           </span>
           <Anchor to={`/shop/${shop._id}`} className="viewButton">
-            Visit store
+            Ver tienda
           </Anchor>
         </div>
       </div>

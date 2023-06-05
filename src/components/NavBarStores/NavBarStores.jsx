@@ -66,7 +66,7 @@ export default function NavBarStores() {
         navigate("/")
       }, 1000)
     } catch (error) {
-      toast.error("You're already signed out or not signed in")
+      toast.error("Ya has cerrado sesión o no has iniciado sesión")
     }
   }
 
@@ -88,20 +88,20 @@ export default function NavBarStores() {
           <span className="buttonEffect">
             <Anchor to='/' className="buttonAnchor">
               <Home />
-              Home
+              inicio
             </Anchor>
           </span>
           <span className="buttonEffect">
             <Anchor to='/shops' className="buttonAnchor">
               <Store />
-              Shops
+              Tiendas
             </Anchor>
           </span>
           {
             token ? <span className="buttonEffect">
               <Anchor to='/myshop' className="buttonAnchor">
                 <Stores />
-                My Shop
+                Mi Tienda
               </Anchor>
             </span>
               : <></>
@@ -110,7 +110,7 @@ export default function NavBarStores() {
             token ? <span className="buttonEffect">
               <Anchor to='/profile' className="buttonAnchor">
                 <Profile />
-                Profile
+                Perfil
               </Anchor>
             </span>
               : <></>
@@ -119,7 +119,7 @@ export default function NavBarStores() {
             token ? <span className="buttonEffect">
               <Anchor className="buttonAnchor" to="/favourites">
                 <Favourite />
-                Favourites
+                Favoritos
               </Anchor>
             </span>
               : <></>
@@ -129,7 +129,7 @@ export default function NavBarStores() {
               <span className="buttonEffect">
                 <Anchor className="buttonAnchor" onClick={handleSignUp}>
                   <Profile />
-                  Register
+                  Registrarse
                 </Anchor>
               </span>
           }
@@ -138,7 +138,7 @@ export default function NavBarStores() {
               <span className="buttonEffect">
                 <Anchor className="buttonAnchor" onClick={handleSignIn}>
                   <Profile />
-                  Login
+                  Iniciar Sesión
                 </Anchor>
               </span>
           }
@@ -146,14 +146,14 @@ export default function NavBarStores() {
             <span className="buttonEffect">
               <Anchor className="buttonAnchor">
                 <SupportAgent />
-                Support Center
+                Centro de ayuda
               </Anchor>
             </span>
             {
               token ? <span className="buttonEffect">
                 <Anchor className="buttonAnchor" onClick={handleSignOutModal}>
                   <LogOut />
-                  Logout
+                  Cerrar Sesión
                 </Anchor>
               </span> : <></>
             }

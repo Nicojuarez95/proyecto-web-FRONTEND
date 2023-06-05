@@ -168,7 +168,7 @@ export default function ShopModal() {
         <div className='shopModal'>
             <div className='shopModalContainer'>
                 <div className='modalTop'>
-                    <h3>Cart ({products.length})</h3>
+                    <h3>Carrito ({products.length})</h3>
                     <img src={x} onClick={closeModal} className='close-x' />
                 </div>
                 <hr />
@@ -190,7 +190,7 @@ export default function ShopModal() {
                                     </section>
                                     <section className='descriptionProduct'>
                                         <div>
-                                            <h3>DESCRIPTION</h3>
+                                            <h3>DESCRIPCIÓN</h3>
                                             <img src={x} id={product._id} onClick={deleteOne} className='close-x' />
                                         </div>
                                         <p>{product.description}</p>
@@ -200,13 +200,13 @@ export default function ShopModal() {
                             })
                             :
                             <div style={{ height: '100%', display: 'flex', 'justifyContent': 'center', 'alignItems': 'center' }}>
-                                <h2 style={{ textAlign: 'center' }}>No products in cart</h2>
+                                <h2 style={{ textAlign: 'center' }}>No hay productos en el carrito</h2>
                             </div>
                     }
                 </div>
                 <div className='modalBtns'>
-                    { products.length ? <p className='buyCart' onClick={handlePay}>BUY CART (${fullPrice})</p> : <></> }
-                    { products.length ? <p className='deleteCart' onClick={deleteAll}>CLEAR CART</p> : <></> }
+                    { products.length ? <p className='buyCart' onClick={handlePay}>Comprar Carrito (${fullPrice})</p> : <></> }
+                    { products.length ? <p className='deleteCart' onClick={deleteAll}>Vaciar Carrito</p> : <></> }
                 </div>
             </div>
             <Toaster position='top-right' />

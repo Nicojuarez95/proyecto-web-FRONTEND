@@ -18,31 +18,31 @@ export default function Contact() {
     <div className='contenedor-contacto'>
         <div className='cont-contact'>
             <div className='cont-title-contact'>
-                <h1>Contact</h1>
+                <h1>Contacto</h1>
             </div>
             <div className='cont-info-contact'>
                 <div className='details-contact'>
                     <div>
-                        <p className='title-info'>Address</p>
+                        <p className='title-info'>Dirección</p>
                     </div>
                     <div>
-                        <p className='info'>Calle Vista Alegre, Valencia, C. P. 10445</p>
+                        <p className='info'>Coardoba, Argentina</p>
                     </div>
                 </div>
                 <div className='details-contact'>
                      <div>
-                        <p className='title-info'>Email</p>
+                        <p className='title-info'>Gmail</p>
                     </div>
                     <div>
-                        <a className='info' href="mailto:asdasdasd@gmail.com">nombreApp@gmail.com</a>
+                        <a className='info' href="mailto:asdasdasd@gmail.com">proyectowebdevelopment@gmail.com</a>
                     </div>
                 </div>
                 <div className='details-contact'>
                      <div>
-                        <p className='title-info'>Phone</p>
+                        <p className='title-info'>Celular</p>
                     </div>
                     <div ref={contactRef}>
-                        <a className='info' href="tel: +543584834589">+5435849215482</a>
+                        <a className='info' href="tel: +543584834589">+543584834859</a>
                     </div>
                 </div>
             </div>
