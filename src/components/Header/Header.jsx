@@ -1,7 +1,7 @@
 import React from "react";
 import "./header.css";
 import { Search } from "../Icons/Icons.js";
-import Logo from "../../images/logo.png";
+import Logo from "../../images/Proyecto__2_-removebg-preview.png";
 import { useLocation } from "react-router-dom";
 import { Link as Anchor } from "react-router-dom";
 
