@@ -25,7 +25,7 @@ export default function BodyHome() {
           <h2 className='text2'>Creador de tiendas en línea para cualquier persona</h2>
           <h2 className='text1'>Fácil. Para celulares y en constante desarrollo</h2>
         </div>
-        <BtnAnchor to='/shops' name='See all stores' class='color_1' />
+        <BtnAnchor to='/shops' name='Ver todas las tiendas' class='color_1' />
       </div>
     </div>
   )

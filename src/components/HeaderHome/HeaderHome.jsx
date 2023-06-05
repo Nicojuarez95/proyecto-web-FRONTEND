@@ -191,9 +191,9 @@ export default function HeaderHome() {
           </Anchor> : <></>}
         </div>
         <div className="cont_BtnSing">
-          {token ? <></> : <BtnSign name="Login" onClick={handleSignIn} />}
-          {token ? <></> : <BtnSign name="Register" onClick={handleSignUp} />}
-          {token ? <BtnSign name="Logout" onClick={handleSignOut} /> : <></>}
+          {token ? <></> : <BtnSign name="Iniciar Sesión" onClick={handleSignIn} />}
+          {token ? <></> : <BtnSign name="Registrarse" onClick={handleSignUp} />}
+          {token ? <BtnSign name="Cerrar Sesión" onClick={handleSignOut} /> : <></>}
         </div>
       </div>
       <div className="header-container">
