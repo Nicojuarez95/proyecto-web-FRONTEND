@@ -35,7 +35,7 @@ export default function LoginForm({ setRenderModal }) {
       password: formInputs[1],
     };
 
-    let url = "https://lance-app.onrender.com/auth/signin";
+    let url = "http://localhost:8080/auth/signin";
     let admin;
     let seller;
     try {

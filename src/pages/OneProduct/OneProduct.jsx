@@ -16,7 +16,7 @@ export default function OneProduct() {
   let shopId = useParams().shopId
   let productId = useParams().productId
 
-  let productUrl = `https://lance-app.onrender.com/product/${productId}`
+  let productUrl = `http://localhost:8080/product/${productId}`
   async function getProduct() {
     try {
       await axios.get(productUrl).then(res => setProduct(res.data.product))
@@ -49,7 +49,7 @@ export default function OneProduct() {
 
   async function handleCart() {
     try {
-      let url = `https://lance-app.onrender.com/shop/${shopId}/createcartproduct`
+      let url = `http://localhost:8080/shop/${shopId}/createcartproduct`
       let token = localStorage.getItem('token')
       let headers = { headers: { 'Authorization': `Bearer ${token}` } }
       if (token) {

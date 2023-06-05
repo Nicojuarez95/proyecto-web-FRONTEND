@@ -45,7 +45,7 @@ export default function NavBarStores() {
     }, 200)
   }
 
-  let url = 'https://lance-app.onrender.com/auth/signout'
+  let url = 'http://localhost:8080/auth/signout'
   let token = localStorage.getItem('token')
   let headers = { headers: { 'Authorization': `Bearer ${token}` } }
 
@@ -60,7 +60,7 @@ export default function NavBarStores() {
         photo: '',
         seller: ''
       }))
-      toast.success('The session was closed successfully!')
+      toast.success('¡La sesión se cerró con éxito!')
       setTimeout(() => {
         setIsNavOpen(!isNavOpen)
         navigate("/")

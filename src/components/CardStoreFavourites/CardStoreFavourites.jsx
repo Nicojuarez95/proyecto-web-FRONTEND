@@ -19,7 +19,7 @@ export default function CardStoreFavourites({ card }) {
   async function deleteFavourite(e) {
     const storeId = e.target.id;
     console.log(storeId);
-    const url = `https://lance-app.onrender.com/favourites/${e.target.id}`;
+    const url = `http://localhost:8080/favourites/${e.target.id}`;
     try {
       await axios.delete(url, headers);
       dispatch(actions.captureFavourites());

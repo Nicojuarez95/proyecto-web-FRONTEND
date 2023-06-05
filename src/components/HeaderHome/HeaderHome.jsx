@@ -44,7 +44,7 @@ export default function HeaderHome() {
   let navigate = useNavigate();
 
   const [isOpen, setIsOpen] = useState(true);
-  let url = "https://lance-app.onrender.com/auth/signout";
+  let url = "http://localhost:8080/auth/signout";
   let token = localStorage.getItem("token");
   let headers = { headers: { Authorization: `Bearer ${token}` } };
 
@@ -63,7 +63,7 @@ export default function HeaderHome() {
           seller: "",
         })
       );
-      toast.success("The session was closed successfully!");
+      toast.success("¡La sesión se cerró con éxito!");
       setTimeout(() => {
         navigate("/");
       }, 500);
@@ -87,7 +87,7 @@ export default function HeaderHome() {
           seller: "",
         })
       );
-      toast.success("The session was closed successfully!");
+      toast.success("¡La sesión se cerró con éxito!");
       setTimeout(() => {
         setIsOpen(!isOpen);
       }, 1000);

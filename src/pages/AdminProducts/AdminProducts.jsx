@@ -18,7 +18,7 @@ export default function AdminProducts() {
   const headers = { headers: { Authorization: `Bearer ${token}` } };
 
   async function getShops() {
-    let url = `https://lance-app.onrender.com/admin/shops/`
+    let url = `http://localhost:8080/admin/shops/`
     await axios.get(url, headers).then(res => setShops(res.data.shops))
   }
 
@@ -27,7 +27,7 @@ export default function AdminProducts() {
   }, [])
 
   async function getProducts() {
-    let url = `https://lance-app.onrender.com/admin/products/?name=${search.current.value}`
+    let url = `http://localhost:8080/admin/products/?name=${search.current.value}`
     await axios.get(url, headers).then(res => {
       setProducts(res.data.products)
       setCantProducts(res.data.cantProducts)
@@ -84,7 +84,7 @@ export default function AdminProducts() {
 
   async function deleteOne(e) {
     let productId = e.target.id
-    let url = `https://lance-app.onrender.com/admin/products/delete/${productId}`
+    let url = `http://localhost:8080/admin/products/delete/${productId}`
     await axios.delete(url, headers).then(res => toast.success(res.data.message))
     setReload(!reload)
   }

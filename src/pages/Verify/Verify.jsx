@@ -20,7 +20,7 @@ export default function Verify() {
                 }, 3000)
             } else {
                 if (verify_code) {
-                    const response = await axios.get('https://lance-app.onrender.com/' + 'auth/verify?verify_code=' + verify_code)//apiurl llega hasta api/
+                    const response = await axios.get('http://localhost:8080/' + 'auth/verify?verify_code=' + verify_code)//apiurl llega hasta api/
                     localStorage.setItem('user', JSON.stringify(response.data))
                     setuserlocal(response.data)
                 }

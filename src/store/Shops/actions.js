@@ -6,7 +6,7 @@ const captureShop = createAsyncThunk(
   async ({ captureCategories, inputText }) => {
     try {
       const response = await axios.get(
-        "https://lance-app.onrender.com/shop/" +
+        "http://localhost:8080/shop/" +
           "?name=" +
           inputText +
           "&category=" +

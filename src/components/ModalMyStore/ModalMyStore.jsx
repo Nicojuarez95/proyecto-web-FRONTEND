@@ -29,7 +29,7 @@ export default function Modal({ onClose }) {
     const token = localStorage.getItem("token");
     const headers = { headers: { Authorization: `Bearer ${token}` } };
     try {
-      const url = "https://lance-app.onrender.com/shop/me";
+      const url = "http://localhost:8080/shop/me";
       const response = await axios.get(url, headers);
       setShop(response.data.shop);
     } catch (error) {
@@ -39,7 +39,7 @@ export default function Modal({ onClose }) {
 
   async function handleUpdateShop(e) {
     e.preventDefault();
-    const url = "https://lance-app.onrender.com/shop/update";
+    const url = "http://localhost:8080/shop/update";
     const data = {
       name: formInfo.current[0].value,
       category: shop.category,
@@ -157,7 +157,7 @@ export default function Modal({ onClose }) {
   async function handleDeleteShop() {
     try {
       const response = await axios.delete(
-        "https://lance-app.onrender.com/shop/delete",
+        "http://localhost:8080/shop/delete",
         headers
       );
       toast.success(response.data.message, { duration: null });

@@ -20,7 +20,7 @@ export default function AdminUsers() {
     const headers = { headers: { Authorization: `Bearer ${token}` } };
 
     async function getShops() {
-        let url = `https://lance-app.onrender.com/admin/shops/`
+        let url = `http://localhost:8080/admin/shops/`
         await axios.get(url, headers).then(res => setShops(res.data.shops))
     }
 
@@ -29,7 +29,7 @@ export default function AdminUsers() {
     }, [])
 
     async function getUsers() {
-        let url = `https://lance-app.onrender.com/admin/users/?name=${search.current.value}&sort=${sort}`
+        let url = `http://localhost:8080/admin/users/?name=${search.current.value}&sort=${sort}`
         await axios.get(url, headers).then(res => {
             setUsers(res.data.users)
             setCantUsers(res.data.cantUsers)
@@ -86,7 +86,7 @@ export default function AdminUsers() {
 
     async function deleteOne(e) {
         let userId = e.target.id
-        let url = `https://lance-app.onrender.com/admin/users/delete/${userId}`
+        let url = `http://localhost:8080/admin/users/delete/${userId}`
         await axios.delete(url, headers).then(res => toast.success(res.data.message))
         setReload(!reload)
     }

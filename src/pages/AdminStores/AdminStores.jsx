@@ -18,7 +18,7 @@ export default function AdminStores() {
     const headers = { headers: { Authorization: `Bearer ${token}` } };
 
     async function getUsers() {
-        let url = `https://lance-app.onrender.com/admin/users/`
+        let url = `http://localhost:8080/admin/users/`
         if (token) {
             await axios.get(url, headers).then(res => {
                 setUsers(res.data.users)
@@ -31,7 +31,7 @@ export default function AdminStores() {
 
     async function getShops() {
         if (search.current) {
-            let url = `https://lance-app.onrender.com/admin/shops/?name=${search.current.value}&category=${selectedCategorie}`
+            let url = `http://localhost:8080/admin/shops/?name=${search.current.value}&category=${selectedCategorie}`
             await axios.get(url, headers).then(res => {
                 setShops(res.data.shops)
                 setCantShops(res.data.cantShops)
@@ -93,14 +93,14 @@ export default function AdminStores() {
         let shop = shops.find(shop => shop._id == shopId)
         let user = users.find(user => user._id == shop.user_id)
         let userId = user._id
-        let url = `https://lance-app.onrender.com/admin/shops/delete/${shopId}/${userId}`
+        let url = `http://localhost:8080/admin/shops/delete/${shopId}/${userId}`
         await axios.delete(url, headers).then(res => toast.success(res.data.message))
         setReload(!reload)
     }
 
     async function desactivateOne(e) {
         let shopId = e.target.id
-        let url = `https://lance-app.onrender.com/admin/shops/desactivate/${shopId}`
+        let url = `http://localhost:8080/admin/shops/desactivate/${shopId}`
         await axios.put(url, null, headers).then(res => toast.success(res.data.message))
         setReload(!reload)
     }

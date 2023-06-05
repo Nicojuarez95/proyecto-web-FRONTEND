@@ -24,14 +24,14 @@ export default function ShopModal() {
         try {
             let product = products.find(product => product._id == e.target.id)
             if(product.quantity === 1){
-                let url = `https://lance-app.onrender.com/shop/cart/deleteone/${product._id}`
+                let url = `http://localhost:8080/shop/cart/deleteone/${product._id}`
                 await axios.delete(url, headers).then(res => toast.success(res.data.message))
                 setReload(!reload)
             }else{
                 let data = {
                     quantity: product.quantity -= 1
                 }
-                let url = `https://lance-app.onrender.com/shop/cart/update/${product._id}`
+                let url = `http://localhost:8080/shop/cart/update/${product._id}`
                 await axios.put(url, data, headers).then(res => {})
                 setReload(!reload)
             }
@@ -47,7 +47,7 @@ export default function ShopModal() {
                 let data = {
                     quantity: product.quantity += 1
                 }
-                let url = `https://lance-app.onrender.com/shop/cart/update/${product._id}`
+                let url = `http://localhost:8080/shop/cart/update/${product._id}`
                 await axios.put(url, data, headers).then(res => {})
                 setReload(!reload)
             }
@@ -63,7 +63,7 @@ export default function ShopModal() {
     async function getProducts() {
         try {
             if(token){
-                let url = `https://lance-app.onrender.com/shop/${shopId}/cart`
+                let url = `http://localhost:8080/shop/${shopId}/cart`
                 await axios.get(url, headers).then(res => setProducts(res.data.products))
             }
         } catch (err) {
@@ -79,7 +79,7 @@ export default function ShopModal() {
     async function deleteOne(e, id) {
         try {
             let productId = e.target.id
-            let url = `https://lance-app.onrender.com/shop/cart/deleteone/${productId}`
+            let url = `http://localhost:8080/shop/cart/deleteone/${productId}`
             await axios.delete(url, headers).then(res => toast.success(res.data.message))
             setReload(!reload)
         } catch (error) {
@@ -97,7 +97,7 @@ export default function ShopModal() {
 
     async function deleteAll() {
         try {
-            let url = `https://lance-app.onrender.com/shop/${shopId}/cart/deleteall`
+            let url = `http://localhost:8080/shop/${shopId}/cart/deleteall`
             await axios.delete(url, headers).then(res => toast.success(res.data.message))
             setReload(!reload)
         } catch (error) {
@@ -120,7 +120,7 @@ export default function ShopModal() {
                     let data = {
                         quantity: product.maxStock
                     }
-                    let url = `https://lance-app.onrender.com/shop/cart/update/${product._id}`
+                    let url = `http://localhost:8080/shop/cart/update/${product._id}`
                     axios.put(url, data, headers).then(res => toast.success('Some items stock has been modified because they exceed the limit'))
                 }
             })
@@ -133,7 +133,7 @@ export default function ShopModal() {
         handleMaxStock()
     },[products])
 
-    let shopUrl = `https://lance-app.onrender.com/shop/${shopId}`
+    let shopUrl = `http://localhost:8080/shop/${shopId}`
     async function getShop() {
         try {
             await axios.get(shopUrl).then(res => setShop(res.data.shop))
@@ -152,7 +152,7 @@ export default function ShopModal() {
             token: shop.token,
             shopId: shop._id
         }
-        axios.post("https://lance-app.onrender.com/payment", data, headers)
+        axios.post("http://localhost:8080/payment", data, headers)
             .then( res => window.location.href = res.data.response.body.init_point ); // te redirige al link de pago
     }
 

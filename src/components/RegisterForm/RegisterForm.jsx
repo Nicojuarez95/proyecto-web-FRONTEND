@@ -37,12 +37,12 @@ export default function RegisterForm() {
             password: formInputs[3],
         }
 
-        let url = 'https://lance-app.onrender.com/auth/signup'
+        let url = 'http://localhost:8080/auth/signup'
 
         try {
             await axios.post(url, data).then(res => {
                 toast.success(res.data.message)
-                toast.success('Please check out your email and verify yourself')
+                toast.success('Por favor revise su correo electronico para la verificacion de la cuenta')
                 setTimeout(() => {
                     dispatch(renderModal({ state: 'login' }))
                 }, 2500)
