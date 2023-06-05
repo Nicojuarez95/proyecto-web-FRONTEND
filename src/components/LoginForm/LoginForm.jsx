@@ -86,9 +86,9 @@ export default function LoginForm({ setRenderModal }) {
         <form ref={formData} onSubmit={handleSignIn} className='login-form'>
             <div className='login-text'>
                 <img src={close} className='login-x' onClick={closeModal}/>
-                <h2>Acceso</h2>
+                <h2>Iniciar Sesión</h2>
                 <LoginFieldsets />
-                <SignBtn text='Sign In' />
+                <SignBtn text='Iniciar Sesión' />
                 {/* ACA PONER BOTON GOOGLE */}
                 <p>Todavía no tienes una cuenta? <Anchor className='link' onClick={handleRender}>Registrarse</Anchor></p>
                 <GoBackToHome />

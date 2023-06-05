@@ -77,7 +77,7 @@ export default function RegisterForm() {
                 <img src={close} className='register-x' onClick={closeModal}/>
                 <h2>Registrarse</h2>
                 <RegisterFieldsets />
-                <SignBtn text='Sign Up' />
+                <SignBtn text='Registrarse' />
                 {/* ACA PONER BOTON GOOGLE */}
                 <p>Ya tienes una cuenta? <Anchor className='link' onClick={handleRender}>Iniciá sesión</Anchor></p>
                 <GoBackToHome />
