@@ -16,7 +16,7 @@ export default function OneProduct() {
   let shopId = useParams().shopId
   let productId = useParams().productId
 
-  let productUrl = `http://localhost:8080/product/${productId}`
+  let productUrl = `https://proyecto-web-backend-host.onrender.com/product/${productId}`
   async function getProduct() {
     try {
       await axios.get(productUrl).then(res => setProduct(res.data.product))
@@ -49,7 +49,7 @@ export default function OneProduct() {
 
   async function handleCart() {
     try {
-      let url = `http://localhost:8080/shop/${shopId}/createcartproduct`
+      let url = `https://proyecto-web-backend-host.onrender.com/shop/${shopId}/createcartproduct`
       let token = localStorage.getItem('token')
       let headers = { headers: { 'Authorization': `Bearer ${token}` } }
       if (token) {

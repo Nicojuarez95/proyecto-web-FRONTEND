@@ -33,7 +33,7 @@ export default function Profile() {
   async function editProfile(e) {
     const token = localStorage.getItem("token");
     const headers = { headers: { Authorization: `Bearer ${token}` } };
-    const url = "http://localhost:8080/auth/update";
+    const url = "https://proyecto-web-backend-host.onrender.com/auth/update";
     try {
       let photoStorage = user.photo;
       if (selectedFile) {

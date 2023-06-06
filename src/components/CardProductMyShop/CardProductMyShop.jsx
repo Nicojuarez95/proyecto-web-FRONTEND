@@ -40,7 +40,7 @@ export default function CardProductMyShop(props) {
     const token = localStorage.getItem('token');
     const headers = { headers: { Authorization: `Bearer ${token}` } };
     try {
-      const res = await axios.delete(`http://localhost:8080/product/delete/${product._id}`, headers);
+      const res = await axios.delete(`https://proyecto-web-backend-host.onrender.com/product/delete/${product._id}`, headers);
       toast.success(res.data.message);
       setReload(!reload);
     } catch (error) {
@@ -64,7 +64,7 @@ export default function CardProductMyShop(props) {
     const token = localStorage.getItem("token");
     const headers = { headers: { Authorization: `Bearer ${token}` } };
     try {
-      const res = await axios.put(`http://localhost:8080/product/update/${product._id}`, productBody, headers);
+      const res = await axios.put(`https://proyecto-web-backend-host.onrender.com/product/update/${product._id}`, productBody, headers);
       toast.success(res.data.message);
     } catch (error) {
       toast.error("Error");

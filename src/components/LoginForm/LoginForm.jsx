@@ -35,7 +35,7 @@ export default function LoginForm({ setRenderModal }) {
       password: formInputs[1],
     };
 
-    let url = "http://localhost:8080/auth/signin";
+    let url = "https://proyecto-web-backend-host.onrender.com/auth/signin";
     let admin;
     let seller;
     try {

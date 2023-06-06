@@ -37,7 +37,7 @@ export default function RegisterForm() {
             password: formInputs[3],
         }
 
-        let url = 'http://localhost:8080/auth/signup'
+        let url = 'https://proyecto-web-backend-host.onrender.com/auth/signup'
 
         try {
             await axios.post(url, data).then(res => {

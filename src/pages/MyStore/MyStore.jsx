@@ -74,7 +74,7 @@ export default function MyStore() {
     const headers = { headers: { Authorization: `Bearer ${token}` } };
     try {
       if (user.seller) {
-        const url = "http://localhost:8080/shop/me";
+        const url = "https://proyecto-web-backend-host.onrender.com/shop/me";
         const response = await axios.get(url, headers);
         setShop(response.data.shop);
       }
@@ -94,7 +94,7 @@ export default function MyStore() {
 
     try {
       if (shop._id) {
-        const url = `http://localhost:8080/shop/${shop._id}/products`;
+        const url = `https://proyecto-web-backend-host.onrender.com/shop/${shop._id}/products`;
         const response = await axios.get(url, headers);
         setProduct(response.data.products);
       }
@@ -104,7 +104,7 @@ export default function MyStore() {
   }
 
   async function createCategory() {
-    const url = "http://localhost:8080/categories/create";
+    const url = "https://proyecto-web-backend-host.onrender.com/categories/create";
     const data = {
       category_name: inputCategory.current?.value,
     };
@@ -119,7 +119,7 @@ export default function MyStore() {
   }
   async function handleNewShop(e) {
     e.preventDefault();
-    const url = "http://localhost:8080/shop/create";
+    const url = "https://proyecto-web-backend-host.onrender.com/shop/create";
     const data = {
       name: formInfo.current?.name?.value || "",
       category: formInfo.current?.category?.value || "",

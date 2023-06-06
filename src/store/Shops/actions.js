@@ -6,7 +6,7 @@ const captureShop = createAsyncThunk(
   async ({ captureCategories, inputText }) => {
     try {
       const response = await axios.get(
-        "http://localhost:8080/shop/" +
+        "https://proyecto-web-backend-host.onrender.com/shop/" +
           "?name=" +
           inputText +
           "&category=" +

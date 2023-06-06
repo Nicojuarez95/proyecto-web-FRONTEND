@@ -22,7 +22,7 @@ export default function CardStoreView(props) {
   async function getFavourites() {
     const token = localStorage.getItem("token");
     const headers = { headers: { Authorization: `Bearer ${token}` } };
-    const url = `http://localhost:8080/favourites/`;
+    const url = `https://proyecto-web-backend-host.onrender.com/favourites/`;
     try {
       if(token){
         const response = await axios.get(url, headers);

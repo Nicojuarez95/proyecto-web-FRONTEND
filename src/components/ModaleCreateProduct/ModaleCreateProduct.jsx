@@ -25,7 +25,7 @@ export default function Modal({ onClose }) {
     const token = localStorage.getItem("token");
     const headers = { headers: { Authorization: `Bearer ${token}` } };
     try {
-      const url = "http://localhost:8080/shop/me";
+      const url = "https://proyecto-web-backend-host.onrender.com/shop/me";
       const response = await axios.get(url, headers);
       setShop(response.data.shop);
       setReload(true);
@@ -38,7 +38,7 @@ export default function Modal({ onClose }) {
     const token = localStorage.getItem("token");
     const headers = { headers: { Authorization: `Bearer ${token}` } };
     e.preventDefault();
-    const url = "http://localhost:8080/product/create";
+    const url = "https://proyecto-web-backend-host.onrender.com/product/create";
     const data = {
       name: formInfo.current[0].value,
       category: formInfo.current[1].value,
@@ -81,7 +81,7 @@ export default function Modal({ onClose }) {
   }
 
   async function getCategories() {
-    let url = `http://localhost:8080/categories/${shop._id}`;
+    let url = `https://proyecto-web-backend-host.onrender.com/categories/${shop._id}`;
     try {
       if (shop._id) {
         await axios.get(url).then((res) => setCategories(res.data.categories));
