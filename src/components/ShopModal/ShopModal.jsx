@@ -179,9 +179,15 @@ export default function ShopModal() {
                                 let card = <section className='modalCard' key={i}>
                                     <img className='imgProduct' src={product.photo} alt={product?.title} />
                                     <section className='detailsProduct'>
-                                        <h3>{product.category}</h3>
-                                        <h2>{product.title}</h2>
-                                        <p>${product.unit_price}</p>
+                                        <div>
+                                            <img src={product.photo} alt="" className='photoCarrito' />
+                                            {/* <h3>{product.category}</h3> */}
+                                        </div>
+                                        <div>   
+                                            <h2>{product.title}</h2>
+                                            <p>${product.unit_price}</p>
+                                        </div>
+                                        
                                         <div className='btnStock'>
                                             <button id={product._id} onClick={handleLessStock}>-</button>
                                             <p>{product.quantity}</p>

@@ -1,9 +1,10 @@
 .cont_btnAnchor {
   height: 7vh;
-  width: 100%;
+  width: 125%;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10rem;
 }
 .btnAnchor {
   display: flex;
@@ -57,4 +58,5 @@
     width: 90px;
     height: 90px;
   }
+  
 }

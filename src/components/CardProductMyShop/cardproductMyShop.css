@@ -161,7 +161,7 @@
   }
   @media (min-width: 320px) and (max-width: 806px) {
     .CardProduct{
-      width: 300px;
+      width: 330px;
     }
     .cont-2-input{
       flex-direction: column;

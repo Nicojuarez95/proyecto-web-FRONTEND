@@ -4,7 +4,7 @@
   align-items: center;
   flex-direction: column;
   background: #d7d7d7;
-  width: 90%;
+  width: 98%;
   min-height: 90%;
   overflow: scroll;
   overflow-x: hidden;
@@ -50,7 +50,7 @@
   align-items: start;
   flex-wrap: wrap;
   gap: 2rem;
-  padding: 1rem;
+  padding-top: 5px;
   width: 100%;
   height: 100%;
 }
@@ -77,7 +77,7 @@
   height: 4rem;
   background: #161616;
   border-radius: 12px;
-  width: 90%;
+  width: 98% !important;
 }
 
 .containerCategoriesFav select {
@@ -126,11 +126,15 @@ select::-webkit-scrollbar-thumb:hover {
   }
 
   .containerCategoriesFav select {
-    width: 7rem;
+    width: 9rem;
   }
 
   .buttonClearAll {
     width: 5rem;
+  }
+  .buscaAlgo{
+    width: 150% !important;
+    background-color: red;
   }
 }
 

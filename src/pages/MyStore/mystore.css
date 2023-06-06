@@ -44,7 +44,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 20px;
+  padding: 10px;
   flex-wrap: wrap;
   gap: 3%;
   overflow-y: auto;
@@ -225,8 +225,25 @@
   }
 
   .profileImageMyStore img {
-    width: 70%;
-    height: 70%;
+    margin-left: 70%;
+    width: 80%;
+    height: 80%;
+  }
+}
+@media (min-width: 375px) and (max-width: 410px) {
+  
+  .profileImageMyStore img {
+    margin-left: 85%;
+    width: 80%;
+    height: 80%;
+  }
+}
+@media (min-width: 411px) and (max-width: 480px) {
+  
+  .profileImageMyStore img {
+    margin-left: 110%;
+    width: 80%;
+    height: 80%;
   }
 }
 
@@ -442,6 +459,7 @@
     align-items: flex-end;
     width: 95%;
     height: 7rem;
+    z-index: 10000;
   }
 }
 
@@ -511,7 +529,7 @@
   }
   .buttonCustomer {
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     padding: .5rem;
   }
 }

@@ -70,10 +70,10 @@ export default function OneProduct() {
             setMaxStock(product.stock)
           })
         } else {
-          toast.error('The stock cannot be 0')
+          toast.error('La cantidad del producto no puede ser 0')
         }
       } else {
-        toast.error('You need to Login')
+        toast.error('Necesitas iniciar sesión para comprar')
       }
     } catch (error) {
       if (error.code === "ERR_NETWORK") {

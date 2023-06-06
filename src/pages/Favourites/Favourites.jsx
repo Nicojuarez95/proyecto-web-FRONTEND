@@ -68,6 +68,7 @@ export default function StoresView() {
           <div className="inputContainer">
             <Search />
             <input
+              className="buscaAlgo"
               type="search"
               placeholder="Busca algo aquí..."
               onChange={(e) => setSearchTerm(e.target.value)}

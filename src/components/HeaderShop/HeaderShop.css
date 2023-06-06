@@ -19,11 +19,11 @@
 }
 
 .topShop .navShop .logoShop{
-    width: 100px;
-    height: 85px;
+    width: 180px;
+    height: 150px;
     object-fit: cover;
     object-position: center;
-    border-radius: 25px;
+    border-radius: 45px;
 }
 
 .topShop .navShop .anchorsShop{
@@ -61,8 +61,9 @@
     }
 
     .topShop .navShop .logoShop{
-        width: 60px;
-        height: 60px;
+        width: 90px;
+        height: 90px;
+        border-radius: 25px;
     }
 
     .topShop .navShop .anchorsShop{

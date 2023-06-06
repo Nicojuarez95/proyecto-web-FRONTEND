@@ -211,7 +211,7 @@ export default function OneStore() {
             <hr />
             <h3>Categorías</h3>
             <select onChange={handleOptionChange}>
-              <option value="">Todas</option>
+              <option value="">Todas las categorías</option>
               {categories.map((category, i) => {
                 let card = (
                   <option key={i} value={category.category_name}>
@@ -244,8 +244,11 @@ export default function OneStore() {
                 <Anchor to={`/shop/${shop._id}/product/${product._id}`} key={i}>
                   <section id={product._id} className="productCard">
                     <img src={product.photo} alt="product" />
-                    <h3>{product.name}</h3>
-                    <p>${product.price}</p>
+                    <div className="infoCardProduct">
+                      <h3>{product.name}</h3>
+                      <p>${product.price}</p>
+                    </div>
+                    
                   </section>
                 </Anchor>
               );

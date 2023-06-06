@@ -11,7 +11,7 @@
   border-radius: 12px 0px 0px 12px;
   height: 90vh;
   gap: 1rem;
-  padding: 1.5rem;
+  padding: 0rem;
 }
 
 .deleteIcon > svg {
@@ -27,7 +27,7 @@
   height: 4rem;
   background: #161616;
   border-radius: 12px;
-  width: 90%;
+  width: 98% !important;
 }
 
 .containerCategories select {
@@ -36,7 +36,7 @@
   border: 1px solid #ffffff;
   padding: 5px;
   border-radius: 4px;
-  width: 15rem;
+  width: 9rem !important;
   height: 2.5rem;
   outline: none;
   cursor: pointer;
@@ -76,8 +76,8 @@ select::-webkit-scrollbar-thumb:hover {
   justify-content: center;
   align-items: flex-start;
   background: #d7d7d7;
-  padding-top: 1rem;
-  width: 90%;
+  padding-top: 0rem;
+  width: 98% !important;
   height: 100%;
   min-height: 90%;
   overflow-y: scroll;
@@ -106,7 +106,7 @@ select::-webkit-scrollbar-thumb:hover {
   align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
-  padding: 1rem;
+  padding: .1rem;
 }
 
 @media (min-width: 320px) and (max-width: 661px) {

@@ -9,12 +9,17 @@
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
+.photoCarrito{
+    width: 200px;
+    height: 90px;
+    object-fit: cover;
+}
 
 .shopModal .shopModalContainer{
     width: 1000px;
     height: 600px;
     background-color: #EBEBEB;
-    padding: 15px 32px;
+    padding: 5px 10px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -45,27 +50,26 @@ color: #566270;
     gap: 15px;
     height: 450px;
     overflow-y: scroll;
-    padding-right: 15px;
+    padding-right: 0px;
 }
 
 .shopModal .shopModalContainer .modalContent .modalCard{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
-    border-left: 1px solid black;
+    border: 1px solid black;
 }
 
 .shopModal .shopModalContainer .modalContent .modalCard>img{
     width: 198px;
     height: 198px;
+    object-fit: cover;
 }
 
 .shopModal .shopModalContainer .modalContent .modalCard .detailsProduct{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
 }
 
 .shopModal .shopModalContainer .modalContent .modalCard .detailsProduct h3{

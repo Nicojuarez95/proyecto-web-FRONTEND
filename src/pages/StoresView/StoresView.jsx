@@ -97,7 +97,7 @@ export default function StoresView() {
             onChange={(e) => setSelectedCategory(e.target.value)}
           >
             <option value=''>
-                                Todas las categorías
+                                Categorías
                             </option>
                             <option value="Ropa y Accesorios">
                                 Ropa y Accesorios

@@ -107,10 +107,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 4rem;
+    width: 5rem;
     font-size: 0.82rem;
     border-radius: 4px;
-    height: 1.5rem;
+    height: 1.8rem;
     background: #161616;
     position: absolute;
     bottom: 5px;
@@ -132,7 +132,7 @@
     margin-bottom: 10px;
   }
   .containerCard {
-    width: 90%;
+    width: 95%;
   }
 
   .viewBottom span {
